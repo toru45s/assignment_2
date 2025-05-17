@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+  </head>
+  <body>
+    <div>
+      <h1>Result</h1>
+      <p>===========================================</p>
+      <h2>Assignment #2 Tohru Yaginuma</h2>
+      <dl>
+        <dt>Final Result:</dt>
+        <dd>{{ step5 }}</dd>
+        <dt>Step 1:</dt>
+        <dd>C: {{ c }} , C³:{{ step1 }}</dd>
+        <dt>Step 2:</dt>
+        <dd>√(c³) = {{ step2 }}</dd>
+        <dt>Step 3:</dt>
+        <dd>{{step2}} / {{ a }} = {{ step3 }}</dd>
+        <dt>Step 4:</dt>
+        <dd>{{ step3 }} * 10 = {{ step4 }}</dd>
+        <dt>Step 5:</dt>
+        <dd>{{ step4 }} + {{b}} ={{ step5 }}</dd>
+      </dl>
+
+      <p>Calculation completed at {{ result_date }}</p>
+      <p>===========================================</p>
+    </div>
+    <div>
+      <a href="{% url 'calculator' %}">Back</a>
+    </div>
+  </body>
+</html>

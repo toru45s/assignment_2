@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <main>
+      <h1>Calculator</h1>
+      <h2>Put your numbers</h2>
+      <form action="{% url 'result' %}" method="post">
+        {% csrf_token %}
+        <div>
+          <label for="num1">Number A:</label>
+          <input
+            type="number"
+            name="num1"
+            min="0"
+            placeholder="Enter first number"
+          />
+        </div>
+        <div>
+          <label for="num2">Number B:</label>
+          <input
+            type="number"
+            name="num2"
+            min="0"
+            placeholder="Enter second number"
+          />
+        </div>
+        <div>
+          <label for="num3">Number C:</label>
+          <input
+            type="number"
+            name="num3"
+            min="0"
+            placeholder="Enter third number"
+          />
+        </div>
+
+        <button type="submit">Calculate</button>
+
+        {% if final_result %} {% endif %}
+      </form>
+    </main>
+  </body>
+</html>
