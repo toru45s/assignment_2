@@ -27,7 +27,9 @@ SECRET_KEY = config('SECRET_KEY', cast = str, default=get_random_secret_key())
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast = bool, default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+  config('PUBLIC_IP', cast = str, default="")
+]
 
 
 # Application definition
